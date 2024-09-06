@@ -1,9 +1,10 @@
 import './App.css'
+import { TelaInicial } from './components/Pages/TelaInicial';
 
 function App() {
   return (
     <>
-      <h1>Olá mundo!</h1>
+      <TelaInicial />
     </>
   )
 }
