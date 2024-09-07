@@ -8,7 +8,7 @@ export const InputStyled = styled.input`
     border-radius: 0.25rem;
 
     font-size: 17px;
-    width: 50%;
+    width: ${props => props.width};
     line-height: 1.5rem;
 
     &:focus {

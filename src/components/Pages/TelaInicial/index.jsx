@@ -31,7 +31,7 @@ export const TelaInicial = () => {
                         <div>
                             <p>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
                             <div className="containerCadastro">
-                                <Input type={'email'} name={'emailCadastro'} placeholderText={'Email'} />
+                                <Input type={'email'} name={'emailCadastro'} placeholderText={'Email'} width={'50%'} />
                                 <ButtonLogin text={'Vamos lá >'} fontSize={'25px'} width={'20%'} />
                             </div>
                         </div>

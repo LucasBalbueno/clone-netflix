@@ -5,7 +5,6 @@ import background from '../../../assets/images/background.jpg'
 export const Container = styled.main`
     width: 100%;
     height: 100vh;
-    
     background-image: url(${background});
     background-size: cover;
     background-repeat: no-repeat;
