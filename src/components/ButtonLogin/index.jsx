@@ -1,8 +1,8 @@
 import { LinkStyled } from './style';
 
-export const ButtonLogin = ({text, fontSize, width}) => {
+export const ButtonLogin = ({to, text, fontSize, width}) => {
     return (
-        <LinkStyled fontSize={fontSize} width={width} >
+        <LinkStyled to={to} fontSize={fontSize} width={width} >
             {text}
         </LinkStyled>
     )

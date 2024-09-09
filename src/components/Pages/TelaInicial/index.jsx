@@ -20,7 +20,7 @@ export const TelaInicial = () => {
                                 <option value="pt">Português</option>
                             </select>
                         </div>
-                        <ButtonLogin text={'Entrar'} />
+                        <ButtonLogin to={'/auth'} text={'Entrar'} />
                     </div>
                 </HeaderPaginaInicial>
 

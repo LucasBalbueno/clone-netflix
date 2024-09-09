@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-// SUBSTITUIR POR LINK REACT ROUTER
-export const LinkStyled = styled.a`
+export const LinkStyled = styled(Link)`
     font-size: ${props => props.fontSize};
     width: ${props => props.width};
     background-color: rgb(229, 9, 20);

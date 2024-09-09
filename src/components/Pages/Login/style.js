@@ -90,7 +90,7 @@ export const Forms = styled.div`
         color: white;
     }
 
-    a:hover {
+    .linkForgetPassword:hover {
         text-decoration: underline;
         color: rgb(172, 172, 172);
     }
@@ -114,5 +114,9 @@ export const Forms = styled.div`
 
     p > a {
         color: blue;
+    }
+
+    p > a:hover {
+        text-decoration: underline;
     }
 `;

@@ -19,18 +19,18 @@ export const Login = () => {
                         <div className="containerInputs">
                             <Input type={'email'} name={'emailLogin'} placeholderText={'Email ou número de celular'} width={'65%'} />
                             <Input type={'password'} name={'passwordLogin'} placeholderText={'Senha'} width={'65%'} />
-                            <ButtonLogin text={'Entrar'} width={'65%'} />
+                            <ButtonLogin to={'/movies'} text={'Entrar'} width={'65%'} />
                             <span>OU</span>
                             <button className="ButtonCode">Usar um código de acesso</button>
-                            <a href="#">Esqueceu a senha?</a>
+                            <a className="linkForgetPassword" href="#">Esqueceu a senha?</a>
                         </div>
                             
-                            <div className="chekboxInput">
-                                <input type="checkbox" />
-                                <label>Lembre-se de mim</label>
-                            </div>
+                        <div className="chekboxInput">
+                            <input type="checkbox" />
+                            <label>Lembre-se de mim</label>
+                        </div>
 
-                            <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a href="#">Saiba mais.</a></p>
+                        <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a href="#">Saiba mais.</a></p>
                     </Forms>
                 </ContainerLogin>
                 <Footer />
