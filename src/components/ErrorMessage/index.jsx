@@ -1,11 +1,10 @@
 import { Container } from "./style";
 
-export const ErrorMessage = () => {
+export const ErrorMessage = ({message}) => {
     return(
         <Container>
             <div>
-                <p>Olá mundo!</p>
-                <button>X</button>
+                <p>{message}</p>
             </div>
         </Container>
     )

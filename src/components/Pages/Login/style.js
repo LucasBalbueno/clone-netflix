@@ -119,4 +119,24 @@ export const Forms = styled.div`
     p > a:hover {
         text-decoration: underline;
     }
+
+    .buttonLogin {
+        font-size: 17px;
+        width: 70%;
+        background-color: rgb(229, 9, 20);
+        border: none;
+        border-radius: 0.25rem;
+        padding: 0.75rem 1rem;
+        font-weight: bold;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .buttonLogin:hover {
+        background-color: rgb(210, 9, 20);
+        transition: all 0.2s;
+    }
 `;

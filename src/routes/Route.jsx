@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import { ErrorPage } from "../components/Pages/ErrorPage";
+import { ProtectedRoute } from "../services/ProtectedRoute";
 
 import { TelaInicial } from "../components/Pages/TelaInicial";
 import { Login } from "../components/Pages/Login";
@@ -13,10 +14,11 @@ export const route = createBrowserRouter([
     },
     {
         path: '/auth',
-        element: <Login />
+        element: <Login />,
     },
     {
         path: '/movies',
-        element: <HomeMovies />
+        element: <ProtectedRoute><HomeMovies /></ProtectedRoute>,
+        errorElement: <ErrorPage />,
     }
 ])
