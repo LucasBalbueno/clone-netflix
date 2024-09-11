@@ -20,5 +20,11 @@ export const route = createBrowserRouter([
         path: '/movies',
         element: <ProtectedRoute><HomeMovies /></ProtectedRoute>,
         errorElement: <ErrorPage />,
+        children: [
+            {
+                // path: '/comedy',
+                // // element:
+            }
+        ]
     }
 ])
