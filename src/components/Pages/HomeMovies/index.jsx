@@ -1,8 +1,12 @@
 import { Container } from './style';
+import { Outlet } from 'react-router-dom';
 
 import { HeaderMovies } from '../../HeaderMovies';
-import { Movies } from '../../Movies';
 import { Footer } from '../../Footer';
+
+// import { Movies } from '../../Movies/Initial';
+// import { Comedy } from '../../Movies/Comedy';
+
 
 export const HomeMovies = () => {
 
@@ -11,8 +15,7 @@ export const HomeMovies = () => {
             <Container>
                 <HeaderMovies />
 
-                {/* // TROCAR PELO OUTLET */}
-                <Movies />
+                <Outlet />
                 
                 <Footer />
             </Container>

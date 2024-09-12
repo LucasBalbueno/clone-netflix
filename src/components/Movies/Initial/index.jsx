@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Container, CardMovie } from './style'
 
-import { getTopRatedMovies } from '../../services/MoviesService';
-// import { getMoviesByGenre } from '../../services/MoviesService';
+import { getTopRatedMovies } from '../../../services/MoviesService';
 
-import { getGenres } from '../../services/MoviesService';
+import { getGenres } from '../../../services/MoviesService';
 
-export const Movies = () => {
+export const InitialMovies = () => {
     const [ filmesArr, setFilmesArr ] = useState([]);
     const [ GenresArr, setGenresArr ] = useState([])
 

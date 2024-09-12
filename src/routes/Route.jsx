@@ -7,6 +7,9 @@ import { TelaInicial } from "../components/Pages/TelaInicial";
 import { Login } from "../components/Pages/Login";
 import { HomeMovies } from "../components/Pages/HomeMovies";
 
+import { Comedy } from '../components/Movies/Comedy'
+import { InitialMovies } from '../components/Movies/Initial'
+
 export const route = createBrowserRouter([
     {
         path: '/',
@@ -22,8 +25,12 @@ export const route = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             {
-                // path: '/comedy',
-                // // element:
+                path: '',
+                element: <InitialMovies />
+            },
+            {
+                path: 'comedy',
+                element: <Comedy />
             }
         ]
     }

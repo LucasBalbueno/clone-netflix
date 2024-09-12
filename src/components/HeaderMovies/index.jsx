@@ -14,7 +14,7 @@ export const HeaderMovies = () => {
                                 <LinkCategory to={'/movies'}>Início</LinkCategory>
                             </li>
                             <li>
-                                <LinkCategory>Comédia</LinkCategory>
+                                <LinkCategory to={'comedy'}>Comédia</LinkCategory>
                             </li>
                             <li>
                                 <LinkCategory>Romance</LinkCategory>
