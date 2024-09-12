@@ -1,4 +1,4 @@
-import { Container, LinkCategory } from './style'
+import { Container, LinkCategory, ButtonSearch } from './style'
 
 import Logo from '../../assets/images/logo.png'
 import Profile from '../../assets/images/profileRed.png';
@@ -38,8 +38,8 @@ export const HeaderMovies = () => {
 
                     <div className='SearchProfile'>
                     <div className='SearchBar'>
-                        <input type="search" />
-                        <button>Buscar</button>
+                        <input id='searchInput' type="search" />
+                        <ButtonSearch id='searchButton' to={'search'}>Buscar</ButtonSearch>
                     </div>
                     <img src={Profile} alt="Imagem Profile Red" />
                     <ButtonLogout />

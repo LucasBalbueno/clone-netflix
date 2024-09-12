@@ -10,6 +10,8 @@ import { HomeMovies } from "../components/Pages/HomeMovies";
 import { GenreMovies } from '../components/Movies/GenreMovies'
 import { InitialMovies } from '../components/Movies/Initial'
 
+import { Search } from "../components/Movies/Search";
+
 export const route = createBrowserRouter([
     {
         path: '/',
@@ -31,6 +33,10 @@ export const route = createBrowserRouter([
             {
                 path: ':genre',
                 element: <GenreMovies />
+            },
+            {
+                path: 'search',
+                element: <Search />
             }
         ]
     }

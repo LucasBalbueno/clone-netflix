@@ -54,3 +54,21 @@ export const getGenres = async () => {
             console.error('HÁ UM PROBLEMA NESSA REQUISIÇÃO:', error);
     }
 }
+
+export const SearchService = async (query) => {
+    const URL = `${baseURL}/search/movie?api_key=${apiKey}&language=pt-BR&query=${query}`;
+
+    try {
+        const response = await fetch(URL);
+        if (!response.ok) {
+            throw new Error('RESPOSTA DA REQUISIÇÃO NÃO FOI OK!')
+        }
+        const data = await response.json();
+
+        // console.log(data.results);
+
+        return data.results;
+    } catch (error) {
+        console.error('HÁ UM PROBLEMA NESSA REQUISIÇÃO:', error);
+    }
+}

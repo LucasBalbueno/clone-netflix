@@ -66,6 +66,9 @@ export const CardMovie = styled.div`
             gap: .5rem;
 
             span {
+                display: flex;
+                align-items: center;
+                text-align: center;
                 background-color: rgb(172, 172, 172);
                 padding: .3rem;
                 border-radius: 5px;
@@ -91,4 +94,12 @@ export const CardMovie = styled.div`
         transform: scale(1.3);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     }
+`;
+
+export const TextNotFound = styled.p`
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-top: 5rem;
+    height: 100vh;
 `;

@@ -49,11 +49,6 @@ export const GenreMovies = () => {
         return (genreName)
     }
 
-    moviesList.map((filme) => {
-        // console.log(filme.genre_ids[0])
-        // console.log(filme.genre_ids[1])
-    })
-
     return (
         <>
             <Container>

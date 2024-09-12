@@ -39,18 +39,14 @@ export const Container = styled.nav`
                 border: 2px solid rgb(229, 9, 20);
                 background-color: rgba(0, 0, 0, 0.7);
                 color: white;
+
+                &:focus {
+                border-color: rgb(229, 9, 20);;
+                outline: none;
+                /* transition: all .5s; */
             }
 
-            button {
-                padding: .5rem;
-                border-radius: 0 20px 20px 0;
-                border: none;
-                font-size: 14px;
-                background-color: rgb(229, 9, 20);
-                font-weight: bold;
-                color: white;
-                cursor: pointer;
-            }
+    }
         }
 
         img {
@@ -65,4 +61,15 @@ export const LinkCategory = styled(Link)`
     color: white;
     font-size: 14px;
     margin-right: 1rem;
+`;
+
+export const ButtonSearch = styled(Link)`
+    padding: .5rem;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    font-size: 14px;
+    background-color: rgb(229, 9, 20);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
 `;
