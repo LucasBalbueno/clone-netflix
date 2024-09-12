@@ -1,21 +1,35 @@
-import { useEffect, useState } from 'react';
-import { Container, CardMovie } from '../styles/style'
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-import { getTopRatedMovies } from '../../../services/MoviesService';
+import { getMoviesByGenre, getGenres } from "../../../services/MoviesService";
 
-import { getGenres } from '../../../services/MoviesService';
+import { Container, CardMovie } from '../styles/style';
 
-export const InitialMovies = () => {
-    const [ filmesList, setFilmesList ] = useState([]);
+export const GenreMovies = () => {
+    const { genre } = useParams();
+    const [ moviesList, setMoviesList ] = useState([]);
     const [ genresList, setGenresList ] = useState([]);
 
     useEffect(() => {
-        const fetchTopRatedMovies = async () => {
-            const movies = await getTopRatedMovies();
-            setFilmesList(movies);
+        const fetchMovies = async () => {
+            const genreId = getGenreId(genre);
+            const movies = await getMoviesByGenre(genreId);
+            setMoviesList(movies.results);
         };
-        fetchTopRatedMovies();
-    }, []);
+        fetchMovies();
+    }, [genre]);
+
+    const getGenreId = (genre) => {
+        const genreMap = {
+            comedy: 35,
+            romance: 10749,
+            action: 28,
+            horror: 27,
+            thriller: 53,
+            drama: 18
+        }
+        return genreMap[genre]
+    }
 
     useEffect(() => {
         const fetchGenresId = async () => {
@@ -35,12 +49,15 @@ export const InitialMovies = () => {
         return (genreName)
     }
 
-    // console.log(filmesList[0])
+    moviesList.map((filme) => {
+        // console.log(filme.genre_ids[0])
+        // console.log(filme.genre_ids[1])
+    })
 
     return (
         <>
             <Container>
-                {filmesList.map((filme) => (
+                {moviesList.map((filme) => (
                     <CardMovie key={filme.id}>
                     <img src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`} alt={filme.title} />
                     <div className="infos">

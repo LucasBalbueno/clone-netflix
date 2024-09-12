@@ -17,19 +17,19 @@ export const HeaderMovies = () => {
                                 <LinkCategory to={'comedy'}>Comédia</LinkCategory>
                             </li>
                             <li>
-                                <LinkCategory>Romance</LinkCategory>
+                                <LinkCategory to={'romance'}>Romance</LinkCategory>
                             </li>
                             <li>
-                                <LinkCategory>Ação</LinkCategory>
+                                <LinkCategory to={'action'}>Ação</LinkCategory>
                             </li>
                             <li>
-                                <LinkCategory>Terror</LinkCategory>
+                                <LinkCategory to={'horror'}>Terror</LinkCategory>
                             </li>
                             <li>
-                                <LinkCategory>Suspense</LinkCategory>
+                                <LinkCategory to={'thriller'}>Suspense</LinkCategory>
                             </li>
                             <li>
-                                <LinkCategory>Drama</LinkCategory>
+                                <LinkCategory to={'drama'}>Drama</LinkCategory>
                             </li>
                         </ul>
                     </div>
