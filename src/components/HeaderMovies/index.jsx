@@ -3,6 +3,8 @@ import { Container, LinkCategory } from './style'
 import Logo from '../../assets/images/logo.png'
 import Profile from '../../assets/images/profileRed.png';
 
+import { ButtonLogout } from '../ButtonLogout';
+
 export const HeaderMovies = () => {
     return(
         <>
@@ -40,7 +42,7 @@ export const HeaderMovies = () => {
                         <button>Buscar</button>
                     </div>
                     <img src={Profile} alt="Imagem Profile Red" />
-                    <button>Sair</button>
+                    <ButtonLogout />
                 </div>
             </Container>
         </>
