@@ -72,3 +72,39 @@ export const SearchService = async (query) => {
         console.error('HÁ UM PROBLEMA NESSA REQUISIÇÃO:', error);
     }
 }
+
+export const getMovieDetails = async (id) => {
+    const URL = `${baseURL}/movie/${id}?api_key=${apiKey}&language=pt-BR`
+
+    try {
+        const response = await fetch(URL);
+        if (!response.ok) {
+            throw new Error('RESPOSTA DA REQUISIÇÃO NÃO FOI OK!')
+        }
+        const data = await response.json();
+
+        // console.log(data);
+
+        return data;
+    } catch (error) {
+        console.error('HÁ UM PROBLEMA NESSA REQUISIÇÃO:', error);
+    }
+}
+
+export const getElencoMovie = async (id) => {
+    const URL = `${baseURL}/movie/${id}/credits?api_key=${apiKey}&language=pt-BR`
+
+    try {
+        const response = await fetch(URL);
+        if (!response.ok) {
+            throw new Error('RESPOSTA DA REQUISIÇÃO NÃO FOI OK!')
+        }
+        const data = await response.json();
+
+        // console.log(data.cast);
+
+        return data.cast;
+    } catch (error) {
+        console.error('HÁ UM PROBLEMA NESSA REQUISIÇÃO:', error);
+    }
+}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, CardMovie, TextNotFound } from '../styles/style';
+import { Container, CardMovie, LinkMovieDetails, TextNotFound } from '../styles/style';
 import { SearchService, getGenres } from "../../../services/MoviesService";
 
 export const Search = () => {
@@ -24,11 +24,11 @@ export const Search = () => {
         return () => {
             searchButton.removeEventListener('click', handleButtonClick);
         };
-    }, []);
-
-    useEffect(() => {
-        console.log(moviesList);
     }, [moviesList]);
+
+    // useEffect(() => {
+    //     console.log(moviesList);
+    // }, [moviesList]);
 
     useEffect(() => {
         const fetchGenresId = async () => {
@@ -48,11 +48,14 @@ export const Search = () => {
         return (genreName)
     }
 
+    // console.log(moviesList.length)
+
     return (
         <>
             <Container>
             {moviesList.length === 0 ? (
-                    <TextNotFound>Filme não encontrado. Procure por outro título!</TextNotFound>
+                    // <TextNotFound>Filme não encontrado. Procure por outro título!</TextNotFound>
+                    <TextNotFound></TextNotFound>
                 ) : (
                     moviesList
                     .filter((filme) => filme.poster_path !== null)
@@ -71,7 +74,7 @@ export const Search = () => {
                                     {filme.genre_ids[1] && <span>{getNameId(filme.genre_ids[1])}</span>}
                                 </div>
 
-                                <a href="#">Ver detalhes</a>
+                                <LinkMovieDetails to={`movie/${filme.id}`}>Ver detalhes</LinkMovieDetails>
                             </div>
                         </CardMovie>
                     ))

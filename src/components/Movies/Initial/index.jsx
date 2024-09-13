@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Container, CardMovie } from '../styles/style'
+import { Container, CardMovie, LinkMovieDetails } from '../styles/style'
 
 import { getTopRatedMovies } from '../../../services/MoviesService';
 
@@ -35,8 +35,6 @@ export const InitialMovies = () => {
         return (genreName)
     }
 
-    // console.log(filmesList[0])
-
     return (
         <>
             <Container>
@@ -55,7 +53,7 @@ export const InitialMovies = () => {
                             {filme.genre_ids[1] && <span>{getNameId(filme.genre_ids[1])}</span>}
                         </div>
 
-                        <a href="#">Ver detalhes</a>
+                        <LinkMovieDetails to={`movie/${filme.id}`}>Ver detalhes</LinkMovieDetails>
                     </div>
                     </CardMovie>
                 ))}

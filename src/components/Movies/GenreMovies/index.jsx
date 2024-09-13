@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import { getMoviesByGenre, getGenres } from "../../../services/MoviesService";
 
-import { Container, CardMovie } from '../styles/style';
+import { Container, CardMovie, LinkMovieDetails } from '../styles/style';
 
 export const GenreMovies = () => {
     const { genre } = useParams();
@@ -67,7 +67,7 @@ export const GenreMovies = () => {
                             {filme.genre_ids[1] && <span>{getNameId(filme.genre_ids[1])}</span>}
                         </div>
 
-                        <a href="#">Ver detalhes</a>
+                        <LinkMovieDetails to={`/movies/movie/${filme.id}`}>Ver detalhes</LinkMovieDetails>
                     </div>
                     </CardMovie>
                 ))}

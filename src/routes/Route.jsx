@@ -9,7 +9,7 @@ import { HomeMovies } from "../components/Pages/HomeMovies";
 
 import { GenreMovies } from '../components/Movies/GenreMovies'
 import { InitialMovies } from '../components/Movies/Initial'
-
+import { MovieDetails } from "../components/Movies/MovieDetails";
 import { Search } from "../components/Movies/Search";
 
 export const route = createBrowserRouter([
@@ -33,6 +33,10 @@ export const route = createBrowserRouter([
             {
                 path: ':genre',
                 element: <GenreMovies />
+            },
+            {
+                path: 'movie/:id',
+                element: <MovieDetails />
             },
             {
                 path: 'search',
