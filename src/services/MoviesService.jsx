@@ -65,7 +65,7 @@ export const SearchService = async (query) => {
         }
         const data = await response.json();
 
-        // console.log(data.results);
+        console.log(data.results);
 
         return data.results;
     } catch (error) {

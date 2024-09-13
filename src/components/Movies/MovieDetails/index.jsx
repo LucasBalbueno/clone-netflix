@@ -37,9 +37,6 @@ export const MovieDetails = () => {
     }, [id])
 
     const formattedReleaseDate = movie.release_date ? movie.release_date.replace(/-/g, '/') : '';
-
-    console.log(movie)
-    // console.log(elencoList)
        
     return (
         <MovieContainer>

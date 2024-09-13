@@ -12,23 +12,21 @@ export const Search = () => {
 
             try {
                 const movies = await SearchService(searchInput);
-                setMoviesList(movies);
+                setMoviesList(movies)
             } catch (error) {
                 console.error('Erro ao buscar filmes:', error)
             }
         };
         
         const searchButton = document.getElementById('searchButton');
-        searchButton.addEventListener('click', handleButtonClick);
+        searchButton.addEventListener('click', handleButtonClick());
 
         return () => {
-            searchButton.removeEventListener('click', handleButtonClick);
-        };
-    }, [moviesList]);
-
-    // useEffect(() => {
-    //     console.log(moviesList);
-    // }, [moviesList]);
+            if (searchButton) {
+                searchButton.removeEventListener('click', handleButtonClick);
+            }
+        }
+    }, []);
 
     useEffect(() => {
         const fetchGenresId = async () => {
@@ -48,14 +46,11 @@ export const Search = () => {
         return (genreName)
     }
 
-    // console.log(moviesList.length)
-
     return (
         <>
             <Container>
             {moviesList.length === 0 ? (
-                    // <TextNotFound>Filme não encontrado. Procure por outro título!</TextNotFound>
-                    <TextNotFound></TextNotFound>
+                    <TextNotFound>Filme não encontrado. Procure por outro título!</TextNotFound>
                 ) : (
                     moviesList
                     .filter((filme) => filme.poster_path !== null)
