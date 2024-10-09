@@ -69,7 +69,7 @@ export const Search = () => {
                                     {filme.genre_ids[1] && <span>{getNameId(filme.genre_ids[1])}</span>}
                                 </div>
 
-                                <LinkMovieDetails to={`movie/${filme.id}`}>Ver detalhes</LinkMovieDetails>
+                                <LinkMovieDetails to={`/movies/movie/${filme.id}`}>Ver detalhes</LinkMovieDetails>
                             </div>
                         </CardMovie>
                     ))
