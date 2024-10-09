@@ -43,10 +43,8 @@ export const Container = styled.nav`
                 &:focus {
                 border-color: rgb(229, 9, 20);;
                 outline: none;
-                /* transition: all .5s; */
+                }
             }
-
-    }
         }
 
         img {
@@ -55,12 +53,57 @@ export const Container = styled.nav`
             margin-right: 2rem;
         }
     }
+
+    @media screen and (max-width: 1130px) {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+
+        .LogoCategorys {
+            flex-direction: column;
+
+            img {
+                margin-bottom: 1rem;
+                margin-top: 1rem;
+            }
+
+            ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: .5rem
+            }
+        }
+
+        .SearchProfile {
+            margin: 1rem 0;
+        }
+    }
+
+    @media screen and (max-width: 490px) {        
+        .SearchProfile {
+            flex-direction: column;
+            gap: .5rem;
+    
+            .SearchBar {
+                margin-right: 0;
+        
+                input {
+                    width: 10rem;
+                }
+            }
+        }
+    }
 `;
 
 export const LinkCategory = styled(Link)`
     color: white;
     font-size: 14px;
     margin-right: 1rem;
+
+    @media screen and (max-width: 700px) {
+        margin-right: 0;
+        
+    }
 `;
 
 export const ButtonSearch = styled(Link)`

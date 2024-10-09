@@ -43,4 +43,14 @@ export const Container = styled.footer`
         color: rgb(123, 123, 123);;
         font-size: 13px;
     }
+
+    @media screen and (max-width: 520px){
+        .footerContent {
+            text-align: center;
+            width: 60%;
+        }
+        .listaLinks {
+            flex-direction: column;
+        }
+    }
 `;

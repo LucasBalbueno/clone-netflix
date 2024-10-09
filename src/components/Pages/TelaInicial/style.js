@@ -64,7 +64,21 @@ export const HeaderPaginaInicial = styled.nav`
         background: transparent;
         color: white;
     }
-    `;
+
+    @media screen and (max-width: 740px) {
+        padding: 0 2rem 0 0;
+        height: 10%;
+    }
+
+    @media screen and (max-width: 520px) {
+        flex-direction: column;
+        padding: 2rem 0;
+
+        .buttonsHeader {
+            margin-top: 1rem;
+        }
+    }
+`;
 
 export const Content = styled.div`
     display: flex;
@@ -99,5 +113,26 @@ export const Content = styled.div`
         justify-content: center;
         gap: .5rem;
         margin-top: 1rem;
+    }
+
+    @media screen and (max-width: 580px) {
+        height: calc(100vh - 10%);
+
+        .contentText {
+            width: 80%;
+
+            h2 {
+                margin-bottom: 2rem;
+                font-size: 45px;
+            }
+            
+            h3 {
+                margin-bottom: 2rem;
+            }
+            
+            p {
+                margin-bottom: 2rem;
+            }
+        }
     }
 `;

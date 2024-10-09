@@ -37,6 +37,11 @@ export const HeaderLogin = styled.nav`
     img {
         width: 15rem;
     }
+
+    @media screen and (max-width: 450px) {
+        padding: 0;
+        justify-content: center;
+    }
 `;
 
 export const ContainerLogin = styled.div`
@@ -138,5 +143,30 @@ export const Forms = styled.div`
     .buttonLogin:hover {
         background-color: rgb(210, 9, 20);
         transition: all 0.2s;
+    }
+
+    @media screen and (max-width: 1250px) {
+        width: 50%;
+    }
+
+    @media screen and (max-width: 650px) {
+        width: 70%;
+    }
+
+    @media screen and (max-width: 400px) {
+        text-align: center;
+
+        h2 {
+            margin: 0 0 1.5rem 0;
+        }
+        
+        p {
+            margin: 1rem 2rem 0 2rem;
+        }
+
+        .chekboxInput {
+            align-self: center;
+            margin: 0;
+        }
     }
 `;
