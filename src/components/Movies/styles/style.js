@@ -209,4 +209,11 @@ export const MovieContainer = styled.div`
             }
         }
     }
+
+    @media screen and (max-width: 800px) {
+        .filmeDetails {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 `;
