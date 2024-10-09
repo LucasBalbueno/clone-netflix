@@ -18,9 +18,6 @@ Este projeto é um clone da interface da Netflix, desenvolvido para fins educaci
 
 ## 💻 Instalação e Execução
 
-Acesso o link do projeto: 
-
-OU:
 1. Clone o repositório:
     ```bash
     git clone https://github.com/seu-usuario/clone-netflix.git
