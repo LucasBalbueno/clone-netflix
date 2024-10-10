@@ -39,6 +39,7 @@ Este projeto é um clone da interface da Netflix, desenvolvido para fins educaci
     http://localhost:3000
     ```
 6. Para acessar o login do app basta digitar as credenciais:
+<br>
 Email: admin
 <br>
 Senha: 123
